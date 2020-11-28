@@ -82,6 +82,68 @@ public class Zajecia3 {
 //        - dodaj metode mialcz ktora w zaleznosci od tego czy kot posiada wlasciciela wysweitla odpowiedni napis
 //        ( np mialcze bo jest mi smutno bez wlascciiela albo mialcze bo jestem szczesliwy z moim panem)
 
+        Cat cat1 = new Cat();
+        cat1.name = "Marek";
+        cat1.coatKind = "wlos";
+        cat1.hasOwner = true;
+        cat1.kind = "kot perski";
+        Cat cat2 = new Cat();
+        cat2.name = "kot";
+        cat2.coatKind = "??";
+        cat2.hasOwner = false;
+        cat2.kind = "dachowiec";
+        Cat cat3 = null;
+
+        for (Cat cat : new Cat[]{cat1, cat2, cat3}) {
+            if (cat != null) {
+                cat.maiu();
+            }
+        }
+
+
+        // sa dwa typy metod: statyczna i neistatyczna
+        // statyczna metoda odwoluje sie do calosci klasy, ta metoda nie jest zwiazana z kompletnie zadnych obiektem i co wiecej - nie mozna jej zwiazac z zadnym obiektem
+        // niestatyczna metoda odwoluje sie NIE do calosci klasy, a do konretnego obiektu ( np tylko do owczarka, a nie do huskiego ). niestatycznych metod nie mzona wywolac ze statycznego kontekstu
+        //
+
+        Dog.meetAllDogs(); //odwolanie do nazwy klasy, a nie nazwy instancji
+//        String string = "sdf";
+//        System.out.println(string.length());
+//        System.out.println(String.valueOf(5));
+// inny przyklad statycznej metody to Character.isDigit()
+
+        new Dog(); // domyslny, niewymagajacy implementacji!
+
+        Dog sznaucer = new Dog(1,"Max");
+
+        System.out.println(sznaucer.name);
+
+
+//        Zadanie.... stworzyc klase User....
+//        a) stworzyc pola okreslajace imie, wiek, miasto pochodzenia
+//        b) stworzyc konstruktor bezparametrowy, który ustawia domyslnie wartosc imienia na
+//        "Nie podano" i wieku na -1. Miasto pochodzenia - Nie podano
+//        c) stowrzyc konstruktor parametrowy ktory ustawia imie w zaleznosci od przeslanego
+//        parametru.... i inne parametry
+//        d) stworzyc dwa obiekty takiej klasy i wywolac metode(czyli najpierw ja stworzyc)
+//        ktora wyswietli informacje o userze
+//        e) zmodyfikowac na poziomie klasy Zajecia3 wartosci miasta pochodzenia, ponownie
+//        wyswietlic informacje
+//        f) stworzyc metode statyczna ktora zwroci komunikat "Jestem metoda statyczna ale
+//        jeszcze nic nie robie", wyswietlic po przypisaniu do zmiennej na pozoiomie klasy Zajecia 3
+
+        User user = new User("Kamil",10,"Gdańsk",husky);  //tworze dwa obiekty
+        User user2 = new User();
+        owczarek.setOwner(user);
+        user.showDetails();
+        user2.showDetails();
+        String nothing = User.doNothing();
+        String nothing2 = User.doNothing();
+        System.out.println(nothing);
+        System.out.println(nothing2);
+
+        // this to slowo kluczowe wieloznaczeniowe. Najczesciej uzywane w przypadku checi odniesienia sie do obiektu na ktorym sie aktualnie pracuje
+        //
 
 
     }
