@@ -1,3 +1,5 @@
+package weekend1;
+
 import java.util.*;
 
 public class Zajecia2 {
