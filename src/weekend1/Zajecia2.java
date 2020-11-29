@@ -1,5 +1,8 @@
 package weekend1;
 
+import weekend2.Account;
+import weekend2.User;
+
 import java.util.*;
 
 public class Zajecia2 {
@@ -58,6 +61,10 @@ public class Zajecia2 {
             }
             System.out.println(sqrtSum);
         }
+
+//        Account account = new Account(1000, new User());
+//        account.balance = Integer.parseInt("miosdfsdnsdofnosd");
+
 
     }
 

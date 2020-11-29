@@ -4,10 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.security.SecureRandom;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Zajecia3 {
 
@@ -181,6 +178,9 @@ public class Zajecia3 {
         // (do domu) d) stworz generator hasel wg sily hasla
         // parametry: zadajemy sile i dlugosc hasla. Parametry nie moga byc sprzeczne, dlatego o dlugosc program pyta juz po wybraniu sily
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//        byte[] bytes = new byte[64];
+//        secureRandom.nextBytes(bytes);
+//        Base64.getEncoder().encodeToString(bytes);
         while (true) {
 //            String input = reader.readLine();
 //            if ("exit".equals(input)) {

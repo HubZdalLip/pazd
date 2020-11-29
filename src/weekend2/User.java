@@ -12,6 +12,12 @@ public class User {
         originCity = "Nie podano";
     }
 
+    public User(String name, int age, String originCity) {
+        this.name = name;
+        this.age = age;
+        this.originCity = originCity;
+    }
+
     public User(String name, int age, String originCity, Dog dog) {
         this.name = name;
         this.age = age;
